@@ -1,0 +1,612 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="es">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="L0S0material_archivos/filelist.xml">
+<title>Laboratorio 0 S0 - IA - UTN-FRM</title>
+<style>
+<!--
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+span.textbf
+	{}
+-->
+</style>
+<base target="_self">
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="10" leftmargin="10">
+
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm"><b><i>
+<span lang="ES-AR" style="font-family:Georgia;color:#003300"><font size="4">
+<a name="Material necesario:">Material necesario:</a></font></span></i></b></p>
+<hr>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia; color: black">Enlaces (proyecto NetBeans (5.5 
+o 6.9.1) – JDK 1.6): </span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia; color: black">Para desarrollar la práctica se 
+dispone de un </span>
+<span style="font-family: Georgia; "><font color="#800080">código Java de partida</font><font color="#003300">
+</font> </span>
+<span style="font-family: Georgia; color: black">(</span><font face="Bookman Old Style" size="2"><a href="L0.zip"><span style="color: black">L0S0</span></a></font><span style="font-family: Georgia; color: black">) 
+que incluye: </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 29.5pt">
+<font size="3"><span style="font-family: Georgia; color: black">-</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Georgia; color: black"><font size="3">&nbsp;&nbsp;
+</font></span>
+<span style="font-size: 11.0pt; font-family: Georgia; color: black">
+<font size="3"><span style="font-family: Georgia; color: black">un <i>framework</i> de 
+búsqueda en espacio de estado genérico (muy básico), independiente del problema 
+y de los algoritmos de búsqueda </span></font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 29.5pt">
+<font size="3"><span style="font-family: Georgia; color: black">-</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Georgia; color: black"><font size="3">&nbsp;&nbsp;
+</font></span>
+<span style="font-size: 11.0pt; font-family: Georgia; color: black">
+<font size="3"><span style="font-family: Georgia; color: black">una 
+<i>implementación de la búsqueda en Anchura</i> (en Grafo) que hace uso de ese framework </span></font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 29.5pt">
+<font size="3"><span style="font-family: Georgia; color: black">-</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Georgia; color: black"><font size="3">&nbsp;&nbsp;
+</font></span>
+<span style="font-size: 11.0pt; font-family: Georgia; color: black">
+<font size="3"><span style="font-family: Georgia; color: black">un modelo para 
+gestionar el <i>Cubo de Rubik</i> en memoria (Caras y Casillas) </span></font></span>
+</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 29.5pt">
+<font size="3"><span style="font-family: Georgia; color: black">-</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Georgia; color: black"><font size="3">&nbsp;&nbsp;
+</font></span>
+<span style="font-size: 11.0pt; font-family: Georgia; color: black">
+<font size="3"><span style="font-family: Georgia; color: black">clases para 
+integrar el modelo anterior de cubo de Rubik en el <i>framework de búsqueda</i> </span>
+</font></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<b>
+<font size="2" face="Georgia" color="#003300">Nota: &quot;<i>operadores</i>&quot;&nbsp; lo 
+vimos en clase como &quot;<i>acciones</i>&quot;</font></b></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<font face="Verdana" size="2" color="#CC0000">La cátedra preparo un <b><u>disco 
+virtual </u></b>con Windows Xp y todas las herramientas y material para trabajar 
+en los tres laboratorios, el mismo podrá usarse con Virtual Box, en los 
+laboratorios informáticos (menos SUN) y en sus máquinas personales. En clases 
+pueden traer <i>pen driver</i> y le pasamos el mismo&nbsp; Para L2 y L3 es muy 
+necesario tenerlo.</font></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.55pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia; color: black">El </span>
+<font color="#0000FF">
+<span style="font-family: Georgia; font-weight:700">código base </span></font>
+<span style="font-family: Georgia; color: black">está estructurado en 3 paquetes </span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 19.95pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<strong>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Paquete </span></strong><tt style="font-family: Courier New"><b>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:
+&quot;Bookman Old Style&quot;;color:navy">rubik.busqueda</span></b></tt></p>
+<p class="MsoNormal" style="margin-left:36.0pt">
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases abstractas e interfaces genéricos utilizados para la implementación de 
+algoritmos de búsqueda en espacios de estados </span></p>
+<p class="MsoNormal" style="text-indent: -11.4pt; margin-left: 74.1pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Symbol; color: black">
+·</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;
+</font> </span><u>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases: </span></u></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Problema</span></i></tt><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Problema genérico a resolver mediante búsqueda en espacio de estados.
+</font> </span>
+</p>
+<p style="text-align: left; margin-left: 106.2pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">
+<span style="font-family: Georgia; color: black"><font size="2">Caracterizado 
+por un </font> </span><tt style="font-family: Courier New">
+<span style="font-family: Georgia; color: black"><font size="2">Estado</font></span></tt><span style="font-family: Georgia; color: black"><font size="2"> 
+inicial y el algoritmo de búsqueda a emplear </font> </span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Nodo</span></i></tt><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Superclase con la definición de los nodos (contienen </font> </span>
+<tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Estados</font></span></tt><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2">) 
+a usar en los algoritmos de búsqueda</font></span><span lang="ES-AR" style="font-family: Bookman Old Style; color: black"><font size="2">
+</font>
+</span></p>
+<p class="MsoNormal" style="margin-left:106.2pt" align="left">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Para manejar la información extra utilizada por un algoritmo de búsqueda 
+concreto se deberá definir una subclase específica de la case </font> </span>
+<tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Nodo</font></span></tt><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2">.
+</font>
+</span></p>
+<p class="MsoNormal" style="text-indent: -11.4pt; margin-left: 74.1pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Symbol; color: black">
+·</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;
+</font> </span><u>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Interfaces </span></u></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span></font><tt><span lang="ES-AR" style="font-size:10.0pt;color:black"> </span></tt>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Busqueda</span></i></tt><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Interfaz a implementar por los métodos de búsqueda</font></span><span lang="ES-AR" style="font-family: Bookman Old Style; color: black"><font size="2">
+</font>
+</span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span></font><tt><span lang="ES-AR" style="font-size:10.0pt;color:black"> </span></tt>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Estado</span></i></tt><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Interfaz a implementar por los objetos que almacenen estados del problema
+</font> </span>
+</p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span></font><tt><span lang="ES-AR" style="font-size:10.0pt;color:black"> </span></tt>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Operador</span></i></tt><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Interfaz a implementar por los objetos que tomen el papel de operadores</font></span><span lang="ES-AR" style="font-family: Bookman Old Style; color: black"><font size="2">
+</font>
+</span></p>
+<p style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:36.0pt;
+margin-bottom:.0001pt">
+<span style="font-size:10.0pt;font-family:Georgia;
+color:black">Se incluye también una <i>implementación de la Búsqueda en anchura</i> 
+como ejemplo del uso de estas clases e interfaces. </span></p>
+<p class="MsoNormal" style="text-indent: -11.4pt; margin-left: 74.1pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Symbol; color: black">
+·</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;
+</font> </span><u>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases. </span></u></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span><span lang="ES-AR" style="color: black"> </span>
+</font>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+NodoBusqueda</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Definición de los nodos a usar en las estrategias. En cada nodo se toma nota del 
+operador empleado para generar el estado asociado (en el nodo raíz es null), 
+para facilitar la generación de la lista de operadores resultante de una 
+búsqueda satisfactoria</font></span></tt><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2">.</font></span><span lang="ES-AR" style="font-family: Bookman Old Style; color: black"><font size="2">&nbsp;
+</font>
+</span></p>
+<p class="MsoNormal" style="text-align: left; margin-left: 106.2pt">
+<tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Atributos privados: operador, costo al nodo g(n), heurística o costo estimado a 
+la meta h(n) y profundidad.</font></span></tt></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span></font><span lang="ES-AR" style="font-size:10.0pt;
+color:black"> </span><i>
+<span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:black">TrazaGenérica</span></i><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2">: 
+clase instanciada por la</font></span><span lang="ES-AR" style="font-family: Bookman Old Style; color: black"><font size="2">
+</font>
+</span>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;
+color:black">Busqueda, </span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">para imprimir por consola al principio de cada interacción (antes de sacar 
+primer nodo)&nbsp; la lista de nodos de frontera y al final de la interacción 
+(después de expandir) el nodo evaluado y sus hijos. De cada nodo muestra 
+operador que lo generó, un <i>código de estado</i>, el <i>costo de camino g</i>, 
+la <i>heurística h</i> y la <i>profundidad</i> del mismo. Lo desactivamos&nbsp; 
+para la experimentación</font></span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span><span lang="ES-AR" style="color: black"> </span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+Para implementar búsqueda en árbol y búsqueda en grafo, se crean dos clases 
+abstractas (<i>BusquedaArbol</i>, <i>BusquedaGrafo</i>) que heredan de la clase
+<i>Rendimiento</i>, que también es abstracta. Cada estrategia es una 
+implementación de la interfaz Búsqueda y heredan o de <i>BusquedaArbol</i>, o de
+<i>BusquedaGrafo</i>.</span></font></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.4pt; margin-left: 125.4pt">
+<span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR">
+<font size="2">-&nbsp; </font> </span><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:navy">
+BusquedaArbol</span></i><b><span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:black">:</span></b><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">clase abstracta que engloba búsquedas en árbol genérica. Deberá ser completada, 
+la misma hereda de la clase Rendimiento</font></span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.4pt; margin-left: 125.4pt">
+<i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+-&nbsp;
+BusquedaGrafo</span></i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">clase abstracta que engloba búsquedas en grafo genérica y hereda 
+de la clase Rendimiento</font></span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.5pt; margin-left: 125.4pt">
+<span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR">
+<font size="2">-&nbsp; </font> </span><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:navy">
+&nbsp;BusquedaXxxx</span></i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">implementación de la estrategia concreta de búsqueda en árbol de 
+estados.</font></span><span lang="ES-AR" style="font-family: Bookman Old Style; color: black"><font size="2">
+</font>
+</span></p>
+<p class="MsoNormal" style="text-align: left; margin-left: 125.4pt">
+<font color="#660000" size="2"><span style="font-family: Georgia">&quot;Xxxx&quot; 
+puede ser <i>Anchura</i>, </span></font>
+<span style="font-family: Georgia; color: #660000"><i>
+<font size="2">CosteUniforme</font></i><font size="2">, <i>Profundidad</i>, <i>
+ProfundidadLimitada, ProfundidadIterativa</i></font></span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.5pt; margin-left: 125.4pt">
+<span lang="ES-AR" style="color:#000000">
+<font size="2">- </font> </span><i>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:navy">
+&nbsp;BusquedaXxxxG</span></i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">implementación de la estrategia concreta de búsqueda en grafo de 
+estados.
+</font> </span></p>
+<p class="MsoNormal" style="text-align: left; margin-left: 125.4pt">
+<font color="#660000" size="2"><span style="font-family: Georgia">&quot;XxxxG&quot; 
+puede ser <i>AnchuraG</i>, </span></font>
+<span style="font-family: Georgia; color: #660000"><i>
+<font size="2">CosteUniformeG</font></i><font size="2">, <i>ProfundidadG</i>, <i>ProfundidadIterativaG</i> y también 
+van a necesitar <i>ProfundidadLimitadaG</i>.</font></span></p>
+<p class="MsoNormal" style="text-align: left; margin-left: 125.4pt">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Por ejemplo se les da ya implementada la clase </font> </span>
+<tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+<i>
+BusquedaAnchuraG</i>, que es </span></tt>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Implementación de la búsqueda en anchura haciendo uso de listas ABIERTOS y 
+CERRADOS </font> </span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.4pt; margin-left: 125.4pt">
+<i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:navy">
+- Rendimiento</span></i><b><i><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2">:</font></span></i><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2">
+</font>
+</span></b>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">clase abstracta que posee los métodos necesarios para calculas 
+las medidas de rendimiento de los algoritmos. Deberá ser completadas con las 
+medidas faltantes respecto a evaluacion de estrategias en cto a tamaño, 
+optimalidad y completitud.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 19.95pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<strong>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Paquete </span>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:
+&quot;Bookman Old Style&quot;;color:navy">rubik.modelo</span></strong></p>
+<p class="MsoNormal" style="margin-left:36.0pt">
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases para modelizar y gestionar un Cubo de Rubik </span></p>
+<p class="MsoNormal" style="text-indent: -11.4pt; margin-left: 74.1pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Symbol; color: black">
+·</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;
+</font> </span><u>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases: </span></u></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<font size="2">
+<span lang="ES-AR" style="font-family: Courier New; color: black">
+o</span><span lang="ES-AR" style="color: black"> </span>
+</font>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+Cubo</span></i></tt><span lang="ES-AR" style="font-size:
+10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">: </span>
+<span lang="ES-AR" style="font-family:Georgia;color:black">
+<font size="2">Encapsula la información sobre un cubo de Rubik e información adicional para 
+gestionarlo.</font></span><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+</span></p>
+<p class="MsoNormal" style="text-indent: -8.5pt; margin-left: 110.6pt" align="left">
+<font size="2">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+-</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<span lang="ES-AR" style="font-family:Georgia;color:black"><font size="2">Cada
+</font>
+</span><tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Cubo</font></span></tt><span lang="ES-AR" style="font-family:Georgia;color:black"><font size="2"> está formado por 6
+</font> </span>
+<tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Caras</font></span></tt><span lang="ES-AR" style="font-family:Georgia;color:black"><font size="2">
+</font> </span></p>
+<p class="MsoNormal" style="text-indent: -8.5pt; margin-left: 110.6pt" align="left">
+<font size="2">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+-</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<span lang="ES-AR" style="font-family:Georgia;color:black">
+<font size="2">Incorpora métodos para duplicar y comparar Cubos, determinar si es solución y 
+aplicar movimientos sobre las caras. </font> </span></p>
+<p class="MsoNormal" style="text-indent: -8.5pt; margin-left: 110.6pt" align="left">
+<font size="2">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+-</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<span lang="ES-AR" style="font-family:Georgia;color:black">
+<font size="2">Incluye arrays estático con información sobre la vecindad de cada cara y los 
+índices de las casillas ''fronterizas'' de cada cara vecina </font> </span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<tt style="font-family: Courier New">
+<font size="2">
+<span lang="ES-AR" style="color: black">o</span></font></tt><span lang="ES-AR" style="font-size: 10.0pt; color: black"><tt> </tt></span>
+<tt style="font-family: Courier New">
+<i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+Cara</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">:</span><span lang="ES-AR" style="font-family: Georgia; color: black"><font size="2"> 
+Encapsula la información sobre una cara de un cubo de Rubik e información 
+adicional para gestionarla. </font> </span></tt></p>
+<p class="MsoNormal" style="text-indent: -8.5pt; margin-left: 110.6pt" align="left">
+<font size="2">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+-</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<span lang="ES-AR" style="font-family:Georgia;color:black"><font size="2">Cada 
+Cara almacena en un array de 9 bytes la situación (color) de sus casillas </font> </span>
+</p>
+<p class="MsoNormal" style="text-align: left; text-indent: -14.2pt; margin-left: 108.2pt">
+<tt style="font-family: Courier New">
+<font size="2">
+<span lang="ES-AR" style="color: black">o</span></font></tt><tt><span lang="es-ar"><font size="2">
+</font></span></tt>
+<tt style="font-family: Courier New">
+<i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+Movimiento:</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Encapsula los movimientos permitidos sobre los cubos de Rubik
+</font> </span></tt></p>
+<p class="MsoNormal" style="text-indent: -8.5pt; margin-left: 110.6pt" align="left">
+<font size="2">
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+-</span></font><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;&nbsp;
+</font> </span>
+<span lang="ES-AR" style="font-family:Georgia;color:black"><font size="2">Por 
+razones de eficiencia los objetos correspondientes a los 12 movimientos posibles 
+se almacenan en un atributo estático </font> </span></p>
+<p class="MsoNormal" style="margin-left:54.0pt">
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">Se 
+incluyen también las clases necesarias para <i>utilizar el modelo de búsqueda</i> 
+anterior en el caso del Cubo de Rubik </span></p>
+<p class="MsoNormal" style="text-indent: -11.4pt; margin-left: 74.1pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Symbol; color: black">
+·</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;
+</font> </span><u>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases: </span></u></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.3pt; margin-left: 108.2pt">
+<tt style="font-family: Courier New">
+<font size="2">
+<span lang="ES-AR" style="color: black">o</span></font></tt><tt><span lang="es-ar"><font size="2">
+</font></span></tt>
+<tt style="font-family: Courier New">
+<i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+EstadoRubik</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Implementación del interfaz Estado, contiene un objeto Cubo en el que delega las 
+operaciones del interfaz Estado. Por razones de eficiencia los 12 operadores 
+aplicables se almacenan en un vector estático</font></span><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+</span></tt></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -11.3pt; margin-left: 108.2pt">
+<tt style="font-family: Courier New">
+<font size="2">
+<span lang="ES-AR" style="color: black">o</span></font></tt><span lang="ES-AR" style="font-size: 10.0pt; color: black"><tt> </tt></span>
+<tt style="font-family: Courier New">
+<i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+OperadorRubik</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Implementación del interfaz Operador, contiene un objeto Movimiento</font></span></tt></p>
+<p class="MsoNormal"><tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+&nbsp;</span></tt></p>
+<div align="center">
+  <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+    <tr>
+      <td width="307" style="width:230.35pt;padding:2.25pt 2.25pt 2.25pt 2.25pt" bgcolor="#CCCC66">
+      <p class="MsoNormal" align="center" style="text-align: center; layout-grid-mode: char">
+      <strong>
+      <span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+      Distribución de las caras</span></strong></td>
+      <td width="306" style="width:229.65pt;padding:2.25pt 2.25pt 2.25pt 2.25pt" bgcolor="#CCCC66">
+      <p class="MsoNormal" align="center" style="text-align: center; layout-grid-mode: char">
+      <strong>
+      <span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+      Numeración de las casillas</span></strong></td>
+    </tr>
+    <tr>
+      <td width="307" style="width:230.35pt;padding:2.25pt 2.25pt 2.25pt 2.25pt" bgcolor="#CCCC66" align="center">
+      <span lang="ES-AR" style="font-size: 9.0pt; font-family: Times New Roman"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1028" type="#_x0000_t75" style='width:243pt;
+ height:150pt' filled="t">
+ <v:fill color2="black"/>
+ <v:imagedata src="L0S0material_archivos/image001.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=324 height=200
+src="L0S0material_archivos/image002.jpg" v:shapes="_x0000_s1028"><![endif]></span></td>
+      <td width="306" style="width:229.65pt;padding:2.25pt 2.25pt 2.25pt 2.25pt" bgcolor="#CCCC66" align="center">
+      <span lang="ES-AR" style="font-size: 9.0pt; font-family: Times New Roman"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:252pt;height:149.25pt'
+ filled="t">
+ <v:fill color2="black"/>
+ <v:imagedata src="L0S0material_archivos/image003.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=336 height=199
+src="L0S0material_archivos/image004.jpg" v:shapes="_x0000_s1030"><![endif]></span></td>
+    </tr>
+  </table>
+</div>
+<p class="MsoNormal">
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;
+color:black">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 19.95pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<strong>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+Paquete </span>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:
+&quot;Bookman Old Style&quot;;color:navy">rubik.grafico</span><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+</span>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black; font-weight: normal">
+(opcional, funciona con jdk 1.6)</span></strong></p>
+<p class="MsoNormal" style="margin-left:42.6pt">
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Interfaz gráfico basado en el <i>Applet de Josef Jelinek</i> </span>
+<span class="textbf"><span lang="ES-AR" style="font-family:Georgia;color:black">
+<font size="2">(</font><span style="font-size:10.0pt"><a style="color: blue; text-decoration: underline; text-underline: single" target="_blank" href="http://software.rubikscube.info/AnimCube/">http://software.rubikscube.info/AnimCube/</a></span><font size="2">)</font></span></span></p>
+<p class="MsoNormal" style="text-indent: -11.4pt; margin-left: 74.1pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Symbol; color: black">
+·</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">&nbsp;&nbsp;
+</font> </span><u>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">
+Clases: </span></u></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 96.0pt" align="left">
+<span lang="ES-AR" style="font-size: 10.0pt; color: black">
+<tt style="font-family: Courier New">
+o </tt></span>
+<tt style="font-family: Courier New">
+<i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+JPanelRubik</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Encapsula al applet AnimCube en un JPanel, añadiendo métodos para recuperar el 
+cubo mostrado en pantalla y para establecer su configuración</font></span><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+</span></tt></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 96.0pt" align="left">
+<tt style="font-family: Courier New">
+<span lang="ES-AR" style="font-size: 10.0pt; color: black">o</span><span style="font-style:normal; font-variant:normal; font-weight:normal; font-family:Times New Roman; color:black" lang="ES-AR"><font size="2">
+</font>
+</span><i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+JFrameRubik</span></i><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">:
+</span>
+<span lang="ES-AR" style="font-family: Georgia; color: black">
+<font size="2">Ejemplo de ventana (JFrame) donde se usa JPanelRubik para mostrar y manipular 
+gráficamente un Cubo de Rubik</font></span><span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+</span></tt></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 96.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-left:21.3pt" align="right"><strong>
+<span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+&nbsp;</span></strong></p>
+<p style="margin-top: 0; margin-bottom: 0pt" align="right">
+<b><font size="1" face="Bookman Old Style"><a href="#Material necesario:">
+<font color="#660000">Subir Arriba</font></a></font></b></p>
+<hr noshade color="#003366" size="3">
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6"><b><font size="4">
+Volver a </font><span style="font-variant: small-caps">
+<a style="text-decoration: none" target="_top" href="indexL0.htm">
+<font size="4" color="#800000">Laboratorio </font></a></span></b>
+<a href="indexL1.htm" style="text-decoration: none">
+<font size="4" color="#800000"><b><span style="font-variant: small-caps">0</span></b></font></a></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">&nbsp;</p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">
+<font color="#000000" face="Times New Roman">
+<a target="_blank" class="style1_copy" href="http://dharma.frm.utn.edu.ar/cursos/inteligencia-artificial">
+<font color="#003366">Cátedra de Inteligencia Artificial</font></a></font><font color="#003366" face="Times New Roman"><a target="_blank" class="style1_copy" href="http://dharma.frm.utn.edu.ar/catedra/index">
+</a>- </font><font face="Times New Roman"><a href="http://www.frm.utn.edu.ar/">
+<font color="#003366">FRM-UTN</font></a></font></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">
+<font color="#003366" face="Times New Roman">
+<a href="http://dharma.frm.utn.edu.ar/">Laboratorio de Desarrollo de 
+Herramientas de Aprendizaje y Razonamiento de Máquinas DHARMA</a></font></p>
+
+</body>
+
+</html>

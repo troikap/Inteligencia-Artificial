@@ -1,0 +1,336 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="es">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Laboratorio 0 - IA - UTN-FRM</title>
+
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+table.MsoTableGrid
+	{border:1.0pt solid windowtext;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+span.apple-converted-space
+	{}
+-->
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/level/leve1000.css"><meta name="Microsoft Theme" content="level 1000">
+</head>
+
+<body topmargin="10" leftmargin="10">
+
+<p class="MsoNormal" align="center" style="text-align: center; margin: 2 1"><b>
+<font size="6"><font color="#800000">
+<a name="Laboratorio 1 Implementación de Algoritmos de Búsqueda"><span lang="ES-TRAD">Laboratorio </span>
+<span lang="es">0 y </span><span lang="ES-TRAD">1 implementación 
+de </span>
+A<span lang="ES-TRAD">algoritmos de </span>
+</a></font><a name="Laboratorio 1 Implementación de Algoritmos de Búsqueda"><font color="#800000">
+B<span lang="ES-TRAD">úsqueda</span></font></a></font></b></p>
+<p class="MsoNormal" align="center" style="text-align: center; margin: 2 1">&nbsp;</p>
+<p class="MsoNormal" align="center" style="text-align: center; margin: 2 1"><b>
+<span lang="ES-TRAD"><font size="5">Asignatura Inteligencia Artificial </font>
+</span></b></p>
+<p class="MsoNormal" align="center" style="text-align: center; margin-top: 0; margin-bottom: 0">
+<span lang="ES-TRAD"><font size="4">5º curso de Ingeniería en Sistema de 
+Información de la FRM = UTN. </font></span></p>
+<p class="MsoNormal" align="center" style="text-align: center; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<hr>
+<p class="MsoBodyText2" style="margin-top:0cm;margin-bottom:
+0cm;margin-bottom:10pt" align="left">
+<font color="#666600" face="Georgia" size="2"><b>&gt;</b><a href="#Guía a seguir en el Laboratorio">Guía</a></font></p>
+<p class="MsoBodyText2" style="margin-top:0cm;margin-right:21.2pt;margin-bottom:
+0cm;margin-left:21.3pt;margin-bottom:.0001pt" align="center">
+<font face="Times New Roman"><span style="color: #660000"><font size="4">Se 
+piensa resolver el Cubo de Rubik, debido a la complejidad del mismo, se plantea 
+un desarrollo de manera académico y con fines netamente educativos, de esta 
+manera ganar experiencia para poder afrontar&nbsp; situaciones similares en un futuro</font></span><span lang="ES-TRAD" style="color: #660000"><font size="4">.</font></span></font></p>
+<p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm">
+<span style="font-family: Georgia; color: black">El <b>objetivo general</b> de 
+ésta práctica es el de enseñar a un computador a resolver el Cubo de Rubik, por 
+medio de Inteligencia Artificial, empleando algoritmos de búsqueda y 
+heurísticas. </span></p>
+<p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm">
+<span style="font-family: Georgia; color: black">La idea es ordenar el <b>Cubo 
+de Rubik</b> por medio de un computador, empleando:</span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -8.5pt; margin-left: 11.35pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia; color: black">-</span><span style="font-family: Georgia">
+</span><font color="#000080"><span style="font-family: Georgia"><b>L0</b></span></font><span style="font-family: Georgia; color: black">: 
+distintos métodos de búsqueda no informada en espacio de estados (árbol y 
+grafo), algoritmo 
+anchura, profundidad, profundidad limitada e interactiva y costo uniforme.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 50; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia"><font color="#000080">
+<a href="#Guía a seguir en el Laboratorio" style="text-decoration: none">
+<font color="#000080">Sesión 0 </font> </a></font>
+<a href="#Guía a seguir en el Laboratorio" style="text-decoration: none">
+<font color="#000080">&nbsp; y&nbsp;&nbsp; Sesión 1</font></a></span></p>
+<p class="MsoNormal" style="text-align: left; text-indent: -8.5pt; margin-left: 11.35pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia; color: black">-</span><span style="font-family: Georgia"> <b>
+<font color="#000080">L1</font></b></span><span style="font-family: Georgia; color: black">: 
+distintos métodos heurísticos de búsqueda en grafo de estados (algoritmo 
+voraz, A* y opcionalmente A*PI*)</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 11.35pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm"><b>
+<span lang="ES-AR" style="font-family:Georgia;
+color:#003300"><a name="Descripción del Problema">Descripción del Problema</a>:</span></b></p>
+<p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm">
+<span style="font-family: Georgia; color: black">El contexto y situación del 
+problema en el cual nos encontramos es el de ordenar un cubo, a partir de un 
+estado aleatorio cualesquiera del mismo, por medio del computador; utilizando 
+algoritmos de búsqueda y heurísticas que nos proporcionarán una solución..
+</span></p>
+<p class="MsoNormal" style="text-align: justify; margin: 6.0pt 0cm">
+<span style="font-family: Georgia; color: black">Se piensa resolver el <i>Cubo 
+de Rubik</i>, debido a la complejidad del mismo, se plantea un desarrollo de 
+manera académico y con fines netamente educativos, de esta manera ganar 
+experiencia para poder afrontar&nbsp; situaciones similares en un futuro.</span></p>
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm">
+<span lang="ES-AR" style="font-family: Georgia; color: black">Un cubo de Rubik 
+3x3x3 está formado por 6 caras móviles con 9 casillas en cada una de ellas. Cada 
+casilla está ''etiquetada'' con el color correspondiente a su cara. </span></p>
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm">
+<span style="font-family: Georgia; color: black">Se sigue la convención de 
+nombrar las 6 caras de acuerdo a su posición desde una perspectiva frontal con 
+la siguiente notación: </span></p>
+<p align="center">
+<img border="0" src="indexL1.jpg" width="659" height="238"></p>
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm">
+<span style="font-family: Georgia; color: black">Dada esta convención se 
+consideran 12 movimientos posibles en un <i>Cubo de Rubik</i>, dos por cada una 
+de las caras anteriores. </span></p>
+<p class="MsoNormal" style="text-align: center; margin: 2.0pt 0cm">
+<img border="0" src="indexL2.jpg" width="643" height="183"></p>
+<p align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm"><b>
+<span style="font-family: Georgia; color: #0000FF">
+<a name="Guía a seguir en el Laboratorio"><font size="4">Guía a seguir en
+</font></a></span><font size="4" color="#0000FF"><span style="font-family: Georgia"><a name="Guía a seguir en el Laboratorio">el Laboratorio</a> 
+0</span></font></b></p>
+<hr>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-align: justify; margin: 0pt 0cm; "><b>
+      <span lang="ES-AR" style="font-size: 15.0pt; font-family: Georgia; font-variant: small-caps; color: purple">
+      <a href="L0S0.htm">Sesión </a> </span>
+      <span lang="ES-AR" style="font-size: 15.0pt; font-family: Georgia; font-variant: small-caps; ">
+      <a href="L0S0.htm">
+      0</a> <font color="#CC0000">(</font></span><font color="#CC0000"><span lang="ES-AR" style="font-family: Georgia; ">grupos 
+-no mas de dos compañeros- en casa)</span></font></b></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-align: justify; margin-left:2cm; margin-right:0cm; margin-top:0pt; margin-bottom:0pt">
+    <span lang="ES-AR" style="font-family:Georgia;color:black">
+    &nbsp;Para familiarizarse con el modelo del cubo, vamos a poner en funcionamiento 
+las clases que deben descargar del aula. </span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left:2cm; margin-right:0cm; margin-top:0pt; margin-bottom:0pt">
+<span style="font-family: Georgia; color: black">Vamos a realizar diferentes 
+implementaciones de&nbsp; métodos de búsqueda no informada. </span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-align: justify; margin: 0pt 0cm; "><b>
+      <span lang="ES-AR" style="font-size: 15.0pt; font-family: Georgia; font-variant: small-caps; color: purple">
+      <a href="L0S1.htm">Sesión 1</a> </span>
+      <span lang="ES-AR" style="font-size: 15.0pt; font-family: Georgia; font-variant: small-caps; ">
+      <font color="#CC0000">(</font></span><font color="#CC0000"><span lang="ES-AR" style="font-family: Georgia; ">individual </span>
+<span style="font-family: Georgia" lang="es-ar">en clase</span><span lang="ES-AR" style="font-size: 15.0pt; font-family: Georgia; font-variant: small-caps; ">)</span></font></b></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-align: justify; margin-left:2cm; margin-right:0cm; margin-top:0pt; margin-bottom:0pt">
+<span style="font-family: Georgia; color: black">Vamos a realizar diferentes 
+experimentos para evaluar el funcionamiento de los algoritmos implementados. </span></p>
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0pt" align="right">
+<b><font size="1" face="Bookman Old Style">
+<a href="#Laboratorio 1 Implementación de Algoritmos de Búsqueda">
+<font color="#660000">Subir Arriba</font></a></font></b></p>
+<hr>
+
+<p style="margin:2.0pt 0cm; text-align:justify" class="MsoNormal">
+<font size="4" color="#0000FF"><b><span style="font-family: Georgia">
+Instrucciones generales</span></b></font><b><font size="4"><span style="font-family: Georgia; color: #0000FF"> 
+para responder los </span></font>
+<span lang="ES-AR" style="font-family: Georgia; color: #0000FF; ">
+<font size="4">CheckPoint d</font></span><font size="4"><span style="font-family: Georgia; color: #0000FF">el 
+ 
+</span><font color="#FF0000"><span style="font-family: Georgia; ">Test L0 y L1</span></font><span style="font-family: Georgia; color: #0000FF">:</span></font></b></p>
+
+<p class="MsoNormal"><b>
+<span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: #CC0000; border: 1.0pt none windowtext; padding: 0cm">
+1)</span></b><span class="apple-converted-space"><b><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: #4C1130; border: 1.0pt none windowtext; padding: 0cm">&nbsp;</span></b></span><b><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Antes 
+que nada debes seguir las consignas de la sesión 0 del laboratorio para<span class="apple-converted-space">&nbsp;</span></span><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: #990000; border: 1.0pt none windowtext; padding: 0cm">corregir, 
+completar y ampliar el código base</span><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">, 
+con esto recién entonces podrás diseñar un par de experimentos y finalmente 
+responder las preguntas en clase (CheckPoint)</span></b></p>
+<p class="MsoNormal" style="line-height: 13.5pt; vertical-align: baseline; background: white">
+<span style="font-family: Verdana; font-size: 11pt" lang="es-ar">L</span><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">a 
+implementación base, a propósito&nbsp;</span><span lang="ES-AR" style="font-size: 11.5pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">tiene&nbsp;</span><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">errores 
+y está incompleto con la finalidad que trabajen y aprendan sobre él, la idea es 
+que l</span><u><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black">o 
+modifiquen según las estrategias vistas en teoría</span></u><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">, 
+por ejemplo control los estados repetidos en abierta y repetidos en cerrada, y en 
+las estrategias primero mejor resolución de empates e investigar distintas 
+formas de asegurar sacar el mejor. Agregar medidas de 
+rendimiento que permitan comparar los algoritmos y realizar un mejor análisis de 
+resultados</span></p>
+<p class="MsoNormal" style="line-height: 13.5pt; vertical-align: baseline; background: white">
+<b>
+<span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: #CC0000; border: 1.0pt none windowtext; padding: 0cm">
+2)<span class="apple-converted-space">&nbsp; </span></span><span class="apple-converted-space">
+<span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; border: 1.0pt none windowtext; padding: 0cm">
+Las respuestas al Test L0 y L1 en clase están orientadas a &quot;</span></span><span lang="ES-AR" style="font-size: 11.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Informar&quot; 
+lo relevante sobre como resolver el cubo con técnicas de búsqueda:</span></b></p>
+<p class="MsoNormal" style="line-height: 13.5pt; vertical-align: baseline; background: white">
+<b>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+(NO  código, NO imágenes, NO comentarios del código,  NO trascribas cosas 
+que&nbsp;estén&nbsp;el material)</span></b></p>
+<p class="MsoNormal" style="line-height: 13.5pt; vertical-align: baseline; background: white">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+&nbsp;Los cinco temas claves&nbsp; son:</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; line-height: 13.5pt; vertical-align: baseline; margin-left: 47.05pt; background: white">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+1.</span><span lang="ES-AR" style="font-size: 7.0pt; color: black; border: 1.0pt none windowtext; padding: 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="apple-converted-space">&nbsp;</span></span><b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Conceptualización</span></b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">: 
+definir con tus palabras como el problema de búsqueda se define como un problema 
+de búsqueda especificando que seria un estado y que sería una acción en el 
+problema del cubo. En material hay mucho de esto, espero sepas sintetizar con 
+tus palabras, no mas de un párrafo seria suficiente.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; line-height: 13.5pt; vertical-align: baseline; margin-left: 47.05pt; background: white">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+2.</span><span lang="ES-AR" style="font-size: 7.0pt; color: black; border: 1.0pt none windowtext; padding: 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="apple-converted-space">&nbsp;</span></span><b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Formalización</span></b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">:&nbsp;simbólicamente&nbsp;como 
+representas un estado (arreglo, matriz...), y al menos una de las 12 posibles 
+acciones, como lo hacemos en los ejercicios del práctico, mira l</span><u><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: blue; border: 1.0pt none windowtext; padding: 0cm">a&nbsp;<a href="https://docs.google.com/file/d/0B9hLKdXXOCZ3QmlnUEY3OU5McGM/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline; text-underline: single"><span style="color:#6611CC">solución 
+de las Torres de Hanoi</span></a></span></u><span class="apple-converted-space"><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: blue; border: 1.0pt none windowtext; padding: 0cm">&nbsp;</span></span><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">...es 
+mas una formulación matemática. </span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -18pt; line-height: 13.5pt; vertical-align: baseline; margin-left: 47.05pt; background: white">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+3.</span><span lang="ES-AR" style="font-size: 7.0pt; color: black; border: 1.0pt none windowtext; padding: 0cm">&nbsp;<span class="apple-converted-space">&nbsp; 
+&nbsp;</span></span><b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Implementación</span></b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">:&nbsp;La 
+idea no es elegir una estrategia, sino desarrollar un código reutilizable para 
+cualquier problema de&nbsp;búsqueda&nbsp;que permita diseñar varios&nbsp;experimentos&nbsp;jugando 
+con algoritmos, luego se analiza los resultados para determinar si para un 
+problema en particular cual será la estrategia ideal.</span></p>
+<blockquote>
+  <p class="MsoNormal" style="text-align: justify; vertical-align: baseline; margin-left: 47.05pt; background: white">
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+  Implementaciones concretas realizadas, NO CÓDIGO, ni clases ni métodos, solo 
+  de manera conceptual explicas con tu palabras como llevas a cabo las 
+  estrategias, solo lo RELEVANTE, </span>
+  <span lang="ES-AR" style="font-family: Verdana; color: black"><font size="2">
+  por ejemplo ¿controlas los estados repetidos en abierta y repetidos en 
+  cerrada?,¿cómo asegurar en las estrategias primero mejor sacar de la lista 
+  siempre el mejor?, si usas un método de ordenación, cuál? </font></span>
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+  es relevante me hables de profundidad interactiva y </span>
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black">
+  las cosas nuevas que has incorporado a la implementación, tanto como lo que no 
+  alcanzaste a realizar. </span>
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+  Repito: No va código, ni pseudocódigo, ni gráficos,... imagina le explican a 
+  un jefe como resolvieron el cubo con las técnicas de búsqueda, explicar con 
+  palabras, sobre todo indicar lo que consideren relevante mencionar a la hora 
+  implementar algoritmos de búsqueda, medidas de rendimiento. Recuerda que la 
+  idea de los informes es que expliques con tus palabras lo &quot;relevante&quot; en 
+  cuanto a cómo implementas las &quot;recetas&quot; vistas en la teoría, NO es un informe 
+  técnico, NO va código, NO van clases ni métodos y hay que sintetizar y 
+  conceptualizar. Pueden mencionar estructuras especiales del lenguaje 
+  utilizadas para implementar estrategias especificas.<b>&nbsp;</b>Respeta la 
+  cantidad de hojas de no mas de 4.</span></p>
+</blockquote>
+<p class="MsoNormal" style="text-align: justify; text-indent: -17.85pt; line-height: 13.5pt; vertical-align: baseline; margin-left: 47.05pt; background: white">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+4.</span><span lang="ES-AR" style="font-size: 7.0pt; color: black; border: 1.0pt none windowtext; padding: 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="apple-converted-space">&nbsp;</span></span><b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Experiementos</span></b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">:&nbsp;<i>Descripción 
+de los experimentos realizados:&nbsp;</i></span></p>
+<blockquote>
+  <p class="MsoNormal" style="text-align: justify; vertical-align: baseline; margin-left: 47.05pt; background: white">
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+  <b>Diseñar con cuidado cada experimento<span class="apple-converted-space">&nbsp;</span></b>explicando 
+  todo, es decir en primer lugar cual es el juego de estados iniciales a usar en 
+  cada experimento (<u>no interesa como los obtuviste,</u> solo cuantos y de que 
+  nivel de complejidad). Son en total<span class="apple-converted-space">&nbsp;</span><b>no 
+  menos de 30</b>, pero cada experimento requiere que utilices estados más o 
+  menos alejados de la solución (dificultad, pasos).&nbsp;<b>NO son casos de prueba</b>, 
+  son muchos estados elegidos aleatoriamente con distinto nivel de dificultad.
+  </span></p>
+  <p class="MsoNormal" style="text-align: justify; vertical-align: baseline; margin-left: 47.05pt; background: white">
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+  En <i><b>cada experimentos</b></i> además del objetivo y explicar la 
+  estrategia para alcanzar el objetivo, indica cuantos estados y de que pasos 
+  utilizas, qué estrategia y parámetros y medidas de rendimiento;&nbsp;obtendrás&nbsp;un 
+  valor medio (estadística) de las medidas de rendimiento que se resumen en una<b> 
+  tabla,</b> (única permitida en este informe), con una <i>
+  breve&nbsp;explicación&nbsp;sobre lo que se observa en la misma</i>. </span></p>
+  <p class="MsoNormal" style="text-align: justify; vertical-align: baseline; margin-left: 47.05pt; background: white">
+  <span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+  Luego en el&nbsp;análisis&nbsp;podrás&nbsp;integrar y discutir los resultados de todos 
+  los&nbsp;experimentos&nbsp;con la finalidad de evaluar las estrategias para este 
+  problema.&nbsp;Pensa al menos dos experimentos bien interesantes y puntuales: por 
+  ejemplo comparar anchura o con profundidad interactiva....no pierdas de vista 
+  como funcionan las estrategias en el cubo.&nbsp;Haciendo referencia a las tablas 
+  exponemos los resultados, indicando tendencias, si&nbsp;alguna&nbsp;estrategia demostró 
+  ser mejor de acuerdo a cierta medida de rendimiento.</span></p>
+</blockquote>
+<p class="MsoNormal" style="text-align: justify; text-indent: -17.85pt; line-height: 13.5pt; vertical-align: baseline; margin-left: 47.05pt; background: white">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">
+5.</span><span lang="ES-AR" style="font-size: 7.0pt; color: black; border: 1.0pt none windowtext; padding: 0cm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="apple-converted-space">&nbsp;</span></span><b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">Análisis 
+de resultados y Conclusiones:</span></b><span lang="ES-AR" style="font-size: 10.0pt; font-family: Verdana; color: black; border: 1.0pt none windowtext; padding: 0cm">&nbsp;las 
+conclusiones deben tener un &quot;análisis de los mismos&quot;, <u>no una síntesis</u>, 
+debes hablar del conjunto de todos los resultados según el tipo de problema de 
+búsqueda y sobre todo lo visto en la teoría en cuanto a evaluación de las 
+estrategia. Si hubieran resultados sorpresivos, intentar explicar el porqué. la 
+estrategia en profundidad no encontrar solución, comentar porque&nbsp; para el 
+problema del Cubo sucede esto.<span class="apple-converted-space">&nbsp;También hay 
+mucho para hablar de la implementación, por ejemplo como se comporta Costo 
+uniforme en el cubo y porque.. </span>En pocas palabras, el lector debe quedarse 
+con una sensación de que los resultados experimentales demuestran las ventajas 
+y/o desventajas de alguna estrategia, y de los algoritmos de búsqueda en 
+general, para abordar el problema de resolver el cubo de rubik de manera 
+automática.</span></p>
+
+<hr noshade style="color: #003366" size="3">
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">
+<font color="#000000" face="Times New Roman">
+<a target="_blank" class="style1_copy" href="http://dharma.frm.utn.edu.ar/cursos/inteligencia-artificial">
+<font color="#003366">Cátedra de Inteligencia Artificial</font></a></font><font color="#003366" face="Times New Roman"><a target="_blank" class="style1_copy" href="http://dharma.frm.utn.edu.ar/catedra/index">
+</a>- </font><font face="Times New Roman"><a href="http://www.frm.utn.edu.ar/">
+<font color="#003366">FRM-UTN</font></a></font></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">
+<font color="#003366" face="Times New Roman">
+<a href="http://dharma.frm.utn.edu.ar/">Laboratorio de Desarrollo de 
+Herramientas de Aprendizaje y Razonamiento de Máquinas DHARMA</a></font></p>
+
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">&nbsp;</p>
+
+</body>
+
+</html>

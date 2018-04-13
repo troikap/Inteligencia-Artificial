@@ -1,0 +1,70 @@
+.mstheme
+{
+	nav-banner-image: url(levbanr.gif);
+	separator-image: url(levrule.gif);
+	list-image-1: url(levbul1.gif);
+	list-image-2: url(levbul2.gif);
+	list-image-3: url(levbul3.gif);
+	navbutton-horiz-pushed: url(levhsel.gif);
+	navbutton-horiz-normal: url(levhbtn.gif);
+	navbutton-vert-pushed: url(levvsel.gif);
+	navbutton-vert-normal: url(levvbtn.gif);
+	navbutton-home-normal: url(levhom.gif);
+	navbutton-up-normal: url(levup.gif);
+	navbutton-prev-normal: url(levbck.gif);
+	navbutton-next-normal: url(levnxt.gif);
+}
+.mstheme-bannertxt
+{
+	font-family: times new roman, Times New Roman, Times;
+	font-size: 6;
+	color: rgb(0,0,0);
+}
+.mstheme-horiz-navtxt
+{
+	font-family: Times New Roman, Times New Roman, Times;
+	font-size: 1;
+	color: rgb(0,0,0);
+}
+.mstheme-vert-navtxt
+{
+	font-family: Times New Roman, Times New Roman, Times;
+	font-size: 1;
+	color: rgb(0,0,0);
+}
+.mstheme-navtxthome
+{
+	font-family: times new roman, Times New Roman, Times;
+	font-size: 1;
+	color: rgb(0,0,102);
+}
+.mstheme-navtxtup
+{
+	font-family: times new roman, Times New Roman, Times;
+	font-size: 1;
+	color: rgb(0,0,0);
+}
+.mstheme-navtxtprev
+{
+	font-family: times new roman, Times New Roman, Times;
+	font-size: 1;
+	color: rgb(0,0,0);
+}
+.mstheme-navtxtnext
+{
+	font-family: times new roman, Times New Roman, Times;
+	font-size: 1;
+	color: rgb(0,0,0);
+}
+UL
+{
+	list-style-image: url(levbul1.gif);
+}
+UL UL
+{
+	list-style-image: url(levbul2.gif);
+}
+UL UL UL
+{
+	list-style-image: url(levbul3.gif);
+}

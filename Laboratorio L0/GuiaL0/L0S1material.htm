@@ -1,0 +1,204 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Laboratorio 0 S1 - IA - UTN-FRM</title>
+<style>
+<!--
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+span.textbf
+	{}
+-->
+</style>
+</head>
+
+<body topmargin="10" leftmargin="10">
+
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm"><b><i>
+<span lang="ES-AR" style="font-family:Georgia;color:#003300"><font size="4">
+<a name="Material necesario">Material necesario</a>:</font></span></i></b></p>
+<hr>
+<p class="MsoNormal" style="text-align: justify; margin-left: 8.5pt; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span style="font-family: Georgia; color: black">Se utilizará el proyecto, 
+&nbsp;modificado en la sesión anterior&nbsp; para modelizar y manejar un cubo de Rubik de tipo 
+3x3x3, junto con una implementación del método de búsqueda en anchura en grafo.
+</span></p>
+<p class="MsoNormal" style="text-align: justify; margin: 2.0pt 0cm"><b>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+&nbsp;</span></b></p>
+<p class="MsoNormal" style="text-align: justify; margin-left:8.5pt; margin-right:0cm; margin-top:2.0pt; margin-bottom:2.0pt"><b>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+Descripción de clases agregadas por la cátedra&nbsp; y cometarios sobre 
+implementaciones:</span></b></p>
+<p class="MsoNormal" style="text-align: justify; margin-left:8.5pt; margin-right:0cm; margin-top:2.0pt; margin-bottom:2.0pt">
+<span lang="ES-AR" style="font-size:10.0pt;font-family:Georgia;color:black">Para 
+implementar búsqueda en árbol y búsqueda en grafo, se crean dos clases 
+abstractas (<i>BusquedaArbol</i>, <i>BusquedaGrafo</i>) que heredan de la clase
+<i>Rendimiento</i>, que también es abstracta. Cada estrategia es una 
+implementación de la interfaz Búsqueda y heredan o de <i>BusquedaArbol</i>, o de
+<i>BusquedaGrafo</i>.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 46.75pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span><i>
+<span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:navy">BusquedaXxxx</span></i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+implementación de la estrategia concreta de búsqueda en árbol.</span><span lang="ES-AR" style="font-size: 9.0pt; font-family: Bookman Old Style; color: black">
+</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 46.75pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span><i>
+<span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:navy">BusquedaXxxxG</span></i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+implementación de la estrategia concreta de búsqueda en grafo.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 46.75pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span><i>
+<span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:navy">BusquedaArbol</span></i><b><span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:black">:</span></b><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">
+</span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+clase abstracta que engloba búsquedas en árbol genérica. Deberá ser completada, 
+la misma hereda de la clase Rendimiento</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 46.75pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;</span></span><i><span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:black">BusquedaGrafo</span></i><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+clase abstracta que engloba búsquedas en grafo genérica y hereda de la clase 
+Rendimiento</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 46.75pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span>
+<tt style="font-family: Courier New"><i>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Bookman Old Style; color: black">
+BusquedaAnchuraG</span></i></tt><span lang="ES-AR" style="font-size:10.0pt;font-family:&quot;Bookman Old Style&quot;;color:black">:
+</span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+Implementación de la búsqueda en anchura haciendo uso de listas ABIERTOS y 
+CERRADOS (búsqueda en grafos).</span><span lang="ES-AR" style="font-size: 9.0pt; font-family: Bookman Old Style; color: black">
+</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 46.75pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-</span><span lang="ES-AR" style="font-size: 7pt; color: black"> </span><i>
+<span lang="ES-AR" style="font-size:10.0pt;
+font-family:&quot;Bookman Old Style&quot;;color:navy">Rendimiento</span></i><b><i><span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">:</span></i><span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+</span></b>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+clase abstracta que posee los métodos necesarios para calculas las medidas de 
+rendimiento de los algoritmos. Deberá ser completadas con las medidas faltantes.</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left:8.5pt; margin-right:0cm; margin-top:2.0pt; margin-bottom:2.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; margin-left:8.5pt; margin-right:0cm; margin-top:2.0pt; margin-bottom:2.0pt"><b>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+Importante!: </span></b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 20; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span>Para 
+los experimentos, la </span><font color="#FF0000">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; ">
+<b>semilla </b></span></font>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+para generar estado inicial aleatorio es </span><font color="#FF0000">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; ">
+su número de legajo</span></font><span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">, 
+representado por 5 dígitos: </span><font color="#FF0000">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; font-weight:700">
+#####.</span></font></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 20; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span>La profundidad 
+del nodo raíz la consideraremos 0.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 20; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span>La clase Traza 
+permite ver costo y profundidad, <i>el costo es el costo de camino de la raíz al 
+nodo actual</i>.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 20; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span>Para la 
+estrategia de costo uniforme el Costo debe ser el mismo para toda acción, por lo 
+tanto coincide con la profudidad.</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 18.0pt"><b>
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+Nota: </span></b></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 18.0pt">
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+Se extrae el primer nodo de la frontera, asumiendo que la frontera ya estaba 
+ordenada según el</span><span lang="ES-AR" style="font-size: 11.0pt; font-family: Georgia"> 
+menor costo</span><span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">. 
+Para tener la frontera ordenada no hace falta recorrer toda la frontera para 
+luego insertar cada nodo expandido, ya que podemos utilizar la búsqueda binaria 
+(con una pequeña modificación) para encontrar el lugar donde debemos insertar el 
+nodo.</span></p>
+<p class="MsoNormal" style="text-align: justify; margin-left: 18.0pt">
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Georgia; color: black">
+El costo debe ser el mismo para toda acción. Es lo único que hace que 
+optimalidad tenga sentido, ya que lo que buscamos es resolver el cubo en la 
+menor cantidad de pasos posibles. Más allá que el costo sea el mismo para toda 
+acción se debe implementar el algoritmo de tal forma que permita recuperar un 
+costo y ordenar la frontera con el mismo. Costo de acción y costo de camino no 
+son la misma cantidad. Entonces, a pesar de que los costos de acción son siempre 
+iguales a uno, los costos de camino de distintos nodos puede ser distinto. Estos 
+(los costos de camino) serán pues iguales a la profundidad, es decir, nodos de 
+menor profundidad (costo de camino) serán expandidos primero, resultando en un 
+comportamiento similar al de primero.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 20; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+<span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">
+-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span>Cuando se llama 
+a unos de los métodos que requiere como parámetro una <i>Linkedlist</i>, 
+convierta su lista (ya sea un vector o un ArrayList): </span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Bookman Old Style; color: black">
+LinkedList xxx = new LinkedList(suLista)</span><span lang="ES-AR" style="font-size: 10.0pt; font-family: Georgia; color: black">, 
+donde <i>suLista </i>es la lista de tipo <i>ArrayList</i> o <i>Vector</i>. &nbsp;Al 
+método de la clase Traza se le pasa la lista </span>
+<span lang="ES-AR" style="font-size: 9.0pt; font-family: Bookman Old Style; color: black">
+xxx</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: -8.5pt; margin-left: 20; margin-right: 0cm; margin-top: 2.0pt; margin-bottom: 2.0pt">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0pt" align="right">
+<b><font size="1" face="Bookman Old Style"><a href="#Material necesario">
+<font color="#660000">Subir Arriba</font></a></font></b></p>
+<hr noshade color="#003366" size="3">
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6"><b><font size="4">
+Volver a </font><span style="font-variant: small-caps">
+<a style="text-decoration: none" target="_top" href="indexL0.htm">
+<font size="4" color="#800000">Laboratorio </font></a></span></b>
+<a href="indexL1.htm" style="text-decoration: none">
+<font size="4" color="#800000"><b><span style="font-variant: small-caps">0</span></b></font></a></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">&nbsp;</p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">
+<font color="#000000" face="Times New Roman">
+<a target="_blank" class="style1_copy" href="http://dharma.frm.utn.edu.ar/cursos/inteligencia-artificial">
+<font color="#003366">Cátedra de Inteligencia Artificial</font></a></font><font color="#003366" face="Times New Roman"><a target="_blank" class="style1_copy" href="http://dharma.frm.utn.edu.ar/catedra/index">
+</a>- </font><font face="Times New Roman"><a href="http://www.frm.utn.edu.ar/">
+<font color="#003366">FRM-UTN</font></a></font></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0 6">
+<font color="#003366" face="Times New Roman">
+<a href="http://dharma.frm.utn.edu.ar/">Laboratorio de Desarrollo de 
+Herramientas de Aprendizaje y Razonamiento de Máquinas DHARMA</a></font></p>
+
+</body>
+
+</html>
