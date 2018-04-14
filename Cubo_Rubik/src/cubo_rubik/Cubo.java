@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cubo_rubik;
 
 /**
@@ -12,5 +8,24 @@ package cubo_rubik;
 public class Cubo {
     
     public int Posiciones[] = new int [26];
+    public int EstadoFinal[] = new int [26];
+    int i;
+    void EstadoFinal(){
+        System.out.println("Estado Final es: ");
+        for (i=0 ; i<26; i++){
+            EstadoFinal[i] = i+1;
+            if (i!=25) {
+                System.out.print(EstadoFinal[i]+",");
+            }
+            else {
+                System.out.print(EstadoFinal[i]);
+            }
+        }
+    }
+    public Cubo(){
+        EstadoFinal();
+    }
+     
+
     
 }
